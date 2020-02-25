@@ -2,15 +2,30 @@ new Vue({
   el: '#app',
   data: {
     parties: {
-      Warisan: 9,
-      PH: 92,
-      "Azmin's Team": 11,
+      // PH: 92,
+      PKR: 39,
+      Amanah: 11,
+      DAP: 42,
+
+      // BN: 42,
+      UMNO: 39,
+      MCA: 2,
+      MIC: 1,
+
       PPBM: 26,
-      BN: 42,
+
       PAS: 18,
+
       GPS: 18,
-      GBS: 8,
-      Others: 2,
+
+      "Azmin's Team": 11,
+      Warisan: 9,
+
+      GBS: 3,
+
+      PSB: 1,
+      UPKO: 1,
+
       Independent: 1
     },
     selected: {},
@@ -39,6 +54,9 @@ new Vue({
     },
     simpleMajorityAchieved: function() {
       return this.totalNumber > this.neededForSimpleMajority
+    },
+    totalParliamentSeats: function() {
+      return Object.values(this.parties).reduce((a, b) => a + b, 0)
     }
   }
 })

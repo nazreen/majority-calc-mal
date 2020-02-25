@@ -21,9 +21,14 @@
   </head>
   <body>
     <h1>Malaysian Parliament Majority Calculator</h1>
-    <p>The total number of seats in the Dewan Rakyat is <b>222</b></p>
-    <p>Number needed for a simple majority to form a government: <b>122</b></p>
     <div id="app">
+      <p>
+        The total number of seats in the Dewan Rakyat is
+        <b>{{ totalParliamentSeats }}</b>
+      </p>
+      <p>
+        Number needed for a simple majority to form a government: <b>122</b>
+      </p>
       <ul>
         <li v-for="(v,name) in parties">
           {{ name }} : {{ v }}
@@ -48,10 +53,9 @@
     <p>Notes:</p>
     <ul>
       <li>
-        Seats breakdown taken from:
-        <a
-          href="https://www.malaymail.com/news/malaysia/2020/02/25/umno-sec-gen-says-bn-no-longer-supports-dr-m-now-wants-fresh-polls/1840840"
-          >Malay Mail article</a
+        Seats breakdown taken (still manually atm) from:
+        <a href="https://en.wikipedia.org/wiki/Parliament_of_Malaysia"
+          >Wikipedia</a
         >
       </li>
       <li>
