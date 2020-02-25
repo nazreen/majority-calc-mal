@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malaysian Parliament Majority Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Malaysian Parliament Majority Calculator</h1>
+    <p>The total number of seats in the Dewan Rakyat is <b>222</b></p>
+    <p>Number needed for a simple majority to form a government: <b>122</b></p>
+    <div id="app">
+      <ul>
+        <li v-for="(v,name) in parties">
+          {{ name }} : {{ v }}
+          <input type="checkbox" id="checkbox" v-model="selected[name]" />
+          <label for="checkbox">{{ selected[name] }}</label>
+        </li>
+      </ul>
+      <section id="selected">
+        <p>Selected: {{ selectedStatement }}</p>
+        <p>Total Number: {{ totalNumber }}</p>
+      </section>
+
+      <section id="result">
+        <p v-if="simpleMajorityAchieved">
+          Enough seats for a simple majority
+        </p>
+        <p v-else>
+          Not enough seats for a simple majority
+        </p>
+      </section>
+    </div>
+    <p>Notes:</p>
+    <ul>
+      <li>
+        Seats breakdown taken from:
+        <a
+          href="https://www.malaymail.com/news/malaysia/2020/02/25/umno-sec-gen-says-bn-no-longer-supports-dr-m-now-wants-fresh-polls/1840840"
+          >Malay Mail article</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/nazreen/majority-calc-mal"
+          >Source code on Github</a
+        >
+        (feel free to submit a PR)
+      </li>
+      <li>made by <a href="https://twitter.com/nxmohamad">nazreen</a></li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
