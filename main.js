@@ -29,7 +29,7 @@ new Vue({
       Independent: 1
     },
     selected: {},
-    neededForSimpleMajority: 122
+    neededForSimpleMajority: 112
   },
   computed: {
     selectedParties: function() {
