@@ -37,19 +37,21 @@
           <label for="checkbox">{{ selected[name] }}</label>
         </li>
       </ul>
-      <section id="selected">
-        <p>Selected: {{ selectedStatement }}</p>
-        <p>Total Number: {{ totalNumber }}</p>
-      </section>
+      <div id="output">
+        <section id="selected">
+          <p>Selected: {{ selectedStatement }}</p>
+          <p>Total Number: {{ totalNumber }}</p>
+        </section>
 
-      <section id="result">
-        <p v-if="simpleMajorityAchieved">
-          Enough seats for a simple majority
-        </p>
-        <p v-else>
-          Not enough seats for a simple majority
-        </p>
-      </section>
+        <section id="result">
+          <p v-if="simpleMajorityAchieved">
+            Enough seats for a simple majority
+          </p>
+          <p v-else>
+            Not enough seats for a simple majority
+          </p>
+        </section>
+      </div>
     </div>
     <p>Notes:</p>
     <ul>
