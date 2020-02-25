@@ -17,20 +17,24 @@ new Vue({
     neededForSimpleMajority: 122
   },
   computed: {
+    selectedParties: function() {
+      return Object.keys(this.parties)
+        .filter(
+          key => Object.keys(this.selected).includes(key) && this.selected[key]
+        )
+        .reduce((obj, key) => {
+          obj[key] = this.parties[key]
+          return obj
+        }, {})
+    },
     selectedNames: function() {
-      return Object.keys(this.selected)
+      return Object.keys(this.selectedParties)
     },
     selectedStatement: function() {
       return this.selectedNames.join(', ')
     },
     totalNumber: function() {
-      const selectedParties = Object.keys(this.parties)
-        .filter(key => this.selectedNames.includes(key))
-        .reduce((obj, key) => {
-          obj[key] = this.parties[key]
-          return obj
-        }, {})
-      const selectedValues = Object.values(selectedParties)
+      const selectedValues = Object.values(this.selectedParties)
       return selectedValues.reduce((a, b) => a + b, 0)
     },
     simpleMajorityAchieved: function() {
