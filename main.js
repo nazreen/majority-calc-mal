@@ -1,3 +1,10 @@
+/* TODOs
+setup bundler so we can use npm packages
+setup dev server
+use parliament-svg
+test view build/index.html
+update pages to serve from build folder
+*/
 new Vue({
   el: '#app',
   data: {
