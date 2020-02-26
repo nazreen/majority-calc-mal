@@ -4,6 +4,7 @@ setup dev server
 use parliament-svg
 test view build/index.html
 update pages to serve from build folder
+chat function?
 */
 new Vue({
   el: '#app',
