@@ -62,6 +62,9 @@ new Vue({
     simpleMajorityAchieved: function() {
       return this.totalNumber > this.neededForSimpleMajority
     },
+    twoThirdsAchieved: function() {
+      return this.totalNumber > this.totalParliamentSeats * (2 / 3)
+    },
     totalParliamentSeats: function() {
       return Object.values(this.parties).reduce((a, b) => a + b, 0)
     }

@@ -45,11 +45,14 @@
           </section>
 
           <section id="result">
-            <p v-if="simpleMajorityAchieved">
-              Enough seats for a simple majority
+            <p v-if="twoThirdsAchieved">
+              Two-thirds majority achieved.
+            </p>
+            <p v-else-if="simpleMajorityAchieved">
+              Enough seats for a simple majority.
             </p>
             <p v-else>
-              Not enough seats for a simple majority (select more parties)
+              Not enough seats for a simple majority (select more parties).
             </p>
           </section>
         </div>
