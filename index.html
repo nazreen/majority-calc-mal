@@ -22,36 +22,38 @@
   <body>
     <h1>Malaysian Parliament Majority Calculator</h1>
     <div id="app">
-      <p>
+      <p id="total-seats-statement">
         The total number of seats in the Dewan Rakyat:
         <b>{{ totalParliamentSeats }}</b>
       </p>
-      <p>
+      <p id="number-needed-statement">
         Number needed for a simple majority to form a government:
         <b> {{ neededForSimpleMajority }}</b>
       </p>
-      <ul>
-        <li v-for="(v,name) in parties">
-          {{ name }} : {{ v }}
-          <input type="checkbox" id="checkbox" v-model="selected[name]" />
-          <label for="checkbox">{{ selected[name] }}</label>
-        </li>
-      </ul>
-      <div id="output">
-        <section id="selected">
-          <p>Selected: {{ selectedStatement }}</p>
-          <p>Total Number: {{ totalNumber }}</p>
-        </section>
+      <main>
+        <ul id="parties-list">
+          <li v-for="(v,name) in parties">
+            {{ name }} : {{ v }}
+            <input type="checkbox" id="checkbox" v-model="selected[name]" />
+            <label for="checkbox">{{ selected[name] }}</label>
+          </li>
+        </ul>
+        <div id="output">
+          <section id="selected">
+            <p>Selected: {{ selectedStatement }}</p>
+            <p>Total Number: {{ totalNumber }}</p>
+          </section>
 
-        <section id="result">
-          <p v-if="simpleMajorityAchieved">
-            Enough seats for a simple majority
-          </p>
-          <p v-else>
-            Not enough seats for a simple majority (select more parties)
-          </p>
-        </section>
-      </div>
+          <section id="result">
+            <p v-if="simpleMajorityAchieved">
+              Enough seats for a simple majority
+            </p>
+            <p v-else>
+              Not enough seats for a simple majority (select more parties)
+            </p>
+          </section>
+        </div>
+      </main>
     </div>
     <p>Notes:</p>
     <ul>

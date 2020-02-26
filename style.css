@@ -14,6 +14,12 @@ h1 {
   font-size: 1.5rem;
 }
 
+#parties-list,
+#output {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #output {
   border: 1px solid black;
   padding: 0 10px;
