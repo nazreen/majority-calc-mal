@@ -35,7 +35,6 @@
           <li v-for="(v,name) in parties">
             {{ name }} : {{ v }}
             <input type="checkbox" id="checkbox" v-model="selected[name]" />
-            <label for="checkbox">{{ selected[name] }}</label>
           </li>
         </ul>
         <div id="output">
