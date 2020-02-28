@@ -31,12 +31,25 @@
         <b> {{ neededForSimpleMajority }}</b>
       </p>
       <main>
-        <ul id="parties-list">
-          <li v-for="(v,name) in parties">
-            {{ name }} : {{ v }}
-            <input type="checkbox" id="checkbox" v-model="selected[name]" />
-          </li>
-        </ul>
+        <table id="parties-list">
+          <tr>
+            <th>Party</th>
+            <th>Seats</th>
+            <th>Selected</th>
+          </tr>
+          <tr v-for="(v,name) in parties">
+            <td>
+              {{ name }}
+            </td>
+            <td>
+              {{ v }}
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox" v-model="selected[name]" />
+            </td>
+          </tr>
+        </table>
+
         <div id="output">
           <section id="selected">
             <p>Selected: {{ selectedStatement }}</p>
