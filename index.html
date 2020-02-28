@@ -55,29 +55,39 @@
               Not enough seats for a simple majority (select more parties).
             </p>
           </section>
+          <aside>
         </div>
-      </main>
-    </div>
-    <p>Notes:</p>
-    <ul>
-      <li>
-        Seats breakdown taken (still manually atm) from:
-        <a href="https://en.wikipedia.org/wiki/Parliament_of_Malaysia"
-          >Wikipedia</a
-        >
-      </li>
-      <li>
-        <a href="https://github.com/nazreen/majority-calc-mal"
-          >Source code on Github</a
-        >
-        (feel free to submit a PR)
-      </li>
-      <li>made by <a href="https://twitter.com/nxmohamad">nazreen</a></li>
-      <li>
-        please let me know of any errors via
-        <a href="https://twitter.com/nxmohamad">my twitter</a>
-      </li>
-    </ul>
+          </main>
+          <aside>
+          <p>Notes:</p>
+          <ul>
+            <li>
+              Seats breakdown taken (still manually atm) from:
+              <a href="https://en.wikipedia.org/wiki/Parliament_of_Malaysia"
+                >Wikipedia</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/nazreen/majority-calc-mal"
+                >Source code on Github</a
+              >
+              (feel free to submit a PR)
+            </li>
+            <li>made by <a href="https://twitter.com/nxmohamad">nazreen</a></li>
+            <li>
+              please let me know of any errors via
+              <a href="https://twitter.com/nxmohamad">my twitter</a>
+            </li>
+          </ul>
+          </aside>
+          <aside>
+            <p>Changelog:</p>
+            <ul>
+              <li v-for="item in changelog">{{ item.date }} : {{ item.description }} </li>
+            </ul>
+          </aside>
+        </div>
+     
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>

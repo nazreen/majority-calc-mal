@@ -43,7 +43,15 @@ new Vue({
       Independent: 2
     },
     selected: {},
-    neededForSimpleMajority: 112
+    neededForSimpleMajority: 112,
+    changelog: [
+      { date: '25 Feb 2020', description: 'this page was launched.' },
+      {
+        date: '27 Feb 2020',
+        description:
+          "updated seat numbers for PPBM from 26 to 36 based on news of 10 from Azmin's faction of 11  moving to PPBM"
+      }
+    ]
   },
   computed: {
     selectedParties: function() {
