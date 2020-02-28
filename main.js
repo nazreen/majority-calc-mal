@@ -11,30 +11,36 @@ new Vue({
   data: {
     parties: {
       // PH: 92,
+      DAP: 42,
       PKR: 39,
       Amanah: 11,
-      DAP: 42,
 
       // BN: 42,
       UMNO: 39,
       MCA: 2,
       MIC: 1,
 
-      PPBM: 26,
+      PPBM: 36,
 
+      // Gagasan Sejahtera
       PAS: 18,
 
       GPS: 18,
+      /*
+      PBB,PRS,PDP,SUPP
+      */
 
-      "Azmin's Team": 11,
       Warisan: 9,
 
       GBS: 3,
+      /*
+      PBS,PBRS,STAR
+      */
 
       PSB: 1,
       UPKO: 1,
 
-      Independent: 1
+      Independent: 2
     },
     selected: {},
     neededForSimpleMajority: 112
