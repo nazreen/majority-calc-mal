@@ -10,7 +10,7 @@ chat function?
 const parties = {
   // PH: 92,
   DAP: 42,
-  PKR: 39,
+  PKR: 40,
   Amanah: 11,
 
   // BN: 42,
@@ -23,7 +23,7 @@ const parties = {
   // Gagasan Sejahtera
   PAS: 18,
 
-  GPS: 18,
+  GPS: 17,
   /*
   PBB,PRS,PDP,SUPP
   */
@@ -46,7 +46,12 @@ const changelog = [
   {
     date: '27 Feb 2020',
     description:
-      "updated seat numbers for PPBM from 26 to 36 based on news of 10 from Azmin's faction of 11  moving to PPBM"
+      "10 from Azmin's faction is said to have defected to PPBM according to an aide of Muhyiddin Yassin. This increases PPBM's tally from 26 to 36."
+  },
+  {
+    date: '29 Feb 2020',
+    description:
+      "Richard Riot Jaem of SUPP defects to PKR. This reduces GPS tally from 18 to 17 and increases PKR's tally from 39 to 40."
   }
 ]
 
