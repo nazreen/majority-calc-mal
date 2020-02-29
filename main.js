@@ -6,52 +6,57 @@ test view build/index.html
 update pages to serve from build folder
 chat function?
 */
+
+const parties = {
+  // PH: 92,
+  DAP: 42,
+  PKR: 39,
+  Amanah: 11,
+
+  // BN: 42,
+  UMNO: 39,
+  MCA: 2,
+  MIC: 1,
+
+  PPBM: 36,
+
+  // Gagasan Sejahtera
+  PAS: 18,
+
+  GPS: 18,
+  /*
+  PBB,PRS,PDP,SUPP
+  */
+
+  Warisan: 9,
+
+  GBS: 3,
+  /*
+  PBS,PBRS,STAR
+  */
+
+  PSB: 1,
+  UPKO: 1,
+
+  Independent: 2
+}
+
+const changelog = [
+  { date: '25 Feb 2020', description: 'this page was launched.' },
+  {
+    date: '27 Feb 2020',
+    description:
+      "updated seat numbers for PPBM from 26 to 36 based on news of 10 from Azmin's faction of 11  moving to PPBM"
+  }
+]
+
 new Vue({
   el: '#app',
   data: {
-    parties: {
-      // PH: 92,
-      DAP: 42,
-      PKR: 39,
-      Amanah: 11,
-
-      // BN: 42,
-      UMNO: 39,
-      MCA: 2,
-      MIC: 1,
-
-      PPBM: 36,
-
-      // Gagasan Sejahtera
-      PAS: 18,
-
-      GPS: 18,
-      /*
-      PBB,PRS,PDP,SUPP
-      */
-
-      Warisan: 9,
-
-      GBS: 3,
-      /*
-      PBS,PBRS,STAR
-      */
-
-      PSB: 1,
-      UPKO: 1,
-
-      Independent: 2
-    },
+    parties,
     selected: {},
     neededForSimpleMajority: 112,
-    changelog: [
-      { date: '25 Feb 2020', description: 'this page was launched.' },
-      {
-        date: '27 Feb 2020',
-        description:
-          "updated seat numbers for PPBM from 26 to 36 based on news of 10 from Azmin's faction of 11  moving to PPBM"
-      }
-    ]
+    changelog
   },
   computed: {
     selectedParties: function() {
