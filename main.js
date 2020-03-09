@@ -8,51 +8,36 @@ chat function?
 */
 
 const parties = {
-  // PH: 92,
-  DAP: 42,
-  PKR: 40,
-  Amanah: 11,
-
-  // BN: 42,
   UMNO: 39,
   MCA: 2,
   MIC: 1,
-
-  PPBM: 36,
-
-  // Gagasan Sejahtera
+  PPBM: 30,
   PAS: 18,
+  GPS: 18, // PBB 13, PRS 2, PDP 2, SUPP 1
+  GBS: 3, // PBS, PBRS, STAR
+  Independent: 1,
 
-  GPS: 17,
-  /*
-  PBB,PRS,PDP,SUPP
-  */
-
+  DAP: 42,
+  PKR: 40,
+  Amanah: 11,
+  "Mahathir's Bloc": 6,
   Warisan: 9,
-
-  GBS: 3,
-  /*
-  PBS,PBRS,STAR
-  */
-
   PSB: 1,
-  UPKO: 1,
-
-  Independent: 2
+  UPKO: 1
 }
 
 const changelog = [
-  { date: '25 Feb 2020', description: 'this page was launched.' },
-  {
-    date: '27 Feb 2020',
-    description:
-      "10 from Azmin's faction is said to have defected to PPBM according to an aide of Muhyiddin Yassin. This increases PPBM's tally from 26 to 36."
-  },
-  {
-    date: '29 Feb 2020',
-    description:
-      "Richard Riot Jaem of SUPP defects to PKR. This reduces GPS tally from 18 to 17 and increases PKR's tally from 39 to 40."
-  }
+  { date: '25 Feb 2020', description: 'this page was launched.' }
+  // {
+  //   date: '27 Feb 2020',
+  //   description:
+  //     "10 from Azmin's faction is said to have defected to PPBM according to an aide of Muhyiddin Yassin. This increases PPBM's tally from 26 to 36."
+  // },
+  // {
+  //   date: '29 Feb 2020',
+  //   description:
+  //     "Richard Riot Jaem of SUPP defects to PKR. This reduces GPS tally from 18 to 17 and increases PKR's tally from 39 to 40."
+  // }
 ]
 
 new Vue({
