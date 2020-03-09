@@ -70,7 +70,7 @@ new Vue({
       return selectedValues.reduce((a, b) => a + b, 0)
     },
     simpleMajorityAchieved: function() {
-      return this.totalNumber > this.neededForSimpleMajority
+      return this.totalNumber >= this.neededForSimpleMajority
     },
     twoThirdsAchieved: function() {
       return this.totalNumber > this.totalParliamentSeats * (2 / 3)
